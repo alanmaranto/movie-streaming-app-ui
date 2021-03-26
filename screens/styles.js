@@ -42,20 +42,33 @@ export const homeStyles = StyleSheet.create({
     top: 14,
   },
   carouselContainerView: {
-    width: '100%',
+    width: "100%",
     height: 350,
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: "center",
+    alignItems: "center",
   },
   carousel: {
     flex: 1,
-    overflow: 'visible',
+    overflow: "visible",
   },
   carouselImage: {
     width: 200,
     height: 320,
     borderRadius: 10,
-    alignSelf: 'center',
-    backgroundColor: 'rgba(0,0,0,0.9)'
-  }
+    alignSelf: "center",
+    backgroundColor: "rgba(0,0,0,0.9)",
+  },
+  carouselText: {
+    padding: 14,
+    color: "white",
+    position: "absolute",
+    bottom: 10,
+    left: 2,
+    fontWeight: "bold",
+  },
+  carouselIcon: {
+    position: "absolute",
+    top: 15,
+    right: 15,
+  },
 });
