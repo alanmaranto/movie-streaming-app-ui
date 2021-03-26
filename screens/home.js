@@ -16,7 +16,7 @@ import {
 import Carousel from "react-native-anchor-carousel";
 import { FontAwesome5, Feather, MaterialIcons } from "@expo/vector-icons";
 import { galleryMock, backgroundMock, listMock } from "../mock";
-import { styles, homeStyles } from "./styles";
+import { styles, homeStyles, movieStyles } from "./styles";
 
 const Home = () => {
   const [background, setBackground] = useState(backgroundMock);
@@ -37,8 +37,8 @@ const Home = () => {
               uri: item.image,
               name: item.title,
               stat: item.released,
-              desc: item.desc
-            })
+              desc: item.desc,
+            });
           }}
         >
           <Image
@@ -99,11 +99,22 @@ const Home = () => {
                 containerWidth={width - 20}
                 ref={carouselRef}
                 inActiveOpacity={0.4}
-              ></Carousel>
+              />
             </View>
-
-
-            
+            <View style={movieStyles.movieInfoContainer}>
+              <View style={{ justifyContent: "center" }}>
+                <Text style={movieStyles.movieName}>{background.name}</Text>
+                <Text style={movieStyles.movieStat}>{background.stat}</Text>
+              </View>
+              <TouchableOpacity style={movieStyles.playIconContainer}>
+                <FontAwesome5
+                  name="play"
+                  size={22}
+                  color="#02ad94"
+                  style={{ marginLeft: 4 }}
+                />
+              </TouchableOpacity>
+            </View>
           </ImageBackground>
         </View>
       </View>

@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
@@ -71,4 +71,38 @@ export const homeStyles = StyleSheet.create({
     top: 15,
     right: 15,
   },
+});
+
+export const movieStyles = StyleSheet.create({
+  movieInfoContainer: {
+    flexDirection: "row",
+    marginTop: 16,
+    justifyContent: "space-between",
+    width: Dimensions.get("window").width - 14,
+  },
+  movieName: {
+    paddingLeft: 14,
+    color: "white",
+    fontWeight: 'bold',
+    fontSize: 20,
+    marginBottom: 6
+  },
+  movieStat: {
+    paddingLeft: 14,
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 14,
+    opacity: 0.8
+  },
+  playIconContainer: {
+    backgroundColor: '#212121',
+    padding: 18,
+    borderRadius: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+    elevation: 10,
+    borderWidth: 4,
+    borderColor: 'rgba(2, 173, 148, 0.2)',
+    marginBottom: 14
+  }
 });
