@@ -30,7 +30,17 @@ const Home = () => {
   const renderItems = ({ item, index }) => {
     return (
       <View>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            carouselRef.current.scrollToIndex(index);
+            setBackground({
+              uri: item.image,
+              name: item.title,
+              stat: item.released,
+              desc: item.desc
+            })
+          }}
+        >
           <Image
             source={{ uri: item.image }}
             style={homeStyles.carouselImage}
@@ -91,6 +101,9 @@ const Home = () => {
                 inActiveOpacity={0.4}
               ></Carousel>
             </View>
+
+
+            
           </ImageBackground>
         </View>
       </View>
